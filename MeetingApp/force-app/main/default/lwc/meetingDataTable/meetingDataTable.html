@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Meetings">
+        <template if:true={meetings}>
+            <lightning-datatable
+                key-field="Id"
+                data={meetings}
+                columns={columns}>
+            </lightning-datatable>
+        </template>
+        <template if:false={meetings}>
+            <p class="slds-p-around_medium">No meetings found</p>
+        </template>
+    </lightning-card>
+</template>
